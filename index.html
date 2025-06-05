@@ -28,5 +28,35 @@
     <p><strong>Te amo mais do que caberia em qualquer mensagem.</strong></p>
     <div class="emoji">💘💕💘💕💘💕💘💕💘💕💘💕</div>
   </section>
+  <script>
+  const emojis = ["❤️‍🔥", "♥️"];
+  const numCoracoes = 25;
+
+  for (let i = 0; i < numCoracoes; i++) {
+    const coracao = document.createElement("div");
+    coracao.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+    coracao.style.position = "fixed";
+    coracao.style.left = Math.random() * 100 + "vw";
+    coracao.style.top = Math.random() * -100 + "px";
+    coracao.style.fontSize = Math.random() * 24 + 24 + "px";
+    coracao.style.animation = "cair 10s linear infinite";
+    coracao.style.opacity = 0.8;
+    coracao.style.zIndex = 9999;
+    document.body.appendChild(coracao);
+  }
+
+  const style = document.createElement("style");
+  style.innerHTML = `
+    @keyframes cair {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(120vh); opacity: 0; }
+    }
+
+    div {
+      pointer-events: none;
+    }
+  `;
+  document.head.appendChild(style);
+</script>
 </body>
 </html>
