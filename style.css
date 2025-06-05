@@ -1,0 +1,60 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #f9d0ff);
+  color: #333;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+header {
+  padding: 2rem 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #d63384;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  max-width: 700px;
+}
+
+.emoji {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.fotos img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.musica a {
+  color: #fff;
+  background: #d63384;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
